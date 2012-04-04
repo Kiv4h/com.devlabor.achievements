@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language languagecode="de-informal" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/language.xsd">
+	<category name="wcf.user">
+		<item name="wcf.user.achievementPoints"><![CDATA[Erfolgspunkte]]></item>
+	</category>
+	
+	<category name="wcf.user.notification">
+		<item name="wcf.user.notification.type.animation"><![CDATA[Animation]]></item>
+	</category>
+	
+    <category name="wcf.user.achievement">
+        <item name="wcf.user.achievement.name"><![CDATA[Bezeichnung]]></item>
+        <item name="wcf.user.achievement.time"><![CDATA[Errungen am]]></item>
+        <item name="wcf.user.achievement.points"><![CDATA[Erfolgspunkte]]></item>
+        <item name="wcf.user.achievement.progress"><![CDATA[Fortschritt]]></item>
+        <item name="wcf.user.achievement.list.noItems"><![CDATA[Es wurden noch keine Erfolge errungen!]]></item>		
+		<item name="wcf.user.achievement.list.all"><![CDATA[Alle Erfolge anzeigen]]></item>		
+		<item name="wcf.user.achievement.suspend"><![CDATA[Erfolgsberechtigung erteilen]]></item>		
+		<item name="wcf.user.achievement.revoke"><![CDATA[Erfolgsberechtigung entziehen]]></item>		
+		<item name="wcf.user.achievement.delete"><![CDATA[Erfolge löschen]]></item>
+		<item name="wcf.user.achievement.delete.sure"><![CDATA[Sollen alle Erfolge des Benutzers gelöscht werden?]]></item>
+	</category>
+	
+	<category name="wcf.achievement">
+		<item name="wcf.achievement.related"><![CDATA[Ähnliche Erfolge]]></item>
+		<item name="wcf.achievement.achieved.user"><![CDATA[Dieser Erfolg wurde bereits von dir errungen.]]></item>
+		<item name="wcf.achievement.receivedBy"><![CDATA[Errungen durch]]></item>
+		<item name="wcf.achievement.list"><![CDATA[Erfolge auflisten]]></item>
+		<item name="wcf.achievement.list.all"><![CDATA[Alle Erfolge]]></item>
+		<item name="wcf.achievement.list.noItems"><![CDATA[Keine Einträge vorhanden.]]></item>
+		<item name="wcf.achievement.list.all.description"><![CDATA[]]></item>
+		<item name="wcf.achievement.list.latest"><![CDATA[Die letzten Erfolge]]></item>
+		<item name="wcf.achievement.list.achievements.total"><![CDATA[Erfolge (insgesamt)]]></item>
+		<item name="wcf.achievement.list.points.total"><![CDATA[Erfolgspunkte (insgesamt)]]></item>
+		<item name="wcf.achievement.list.completed.total"><![CDATA[Abgeschlossen]]></item>
+		<item name="wcf.achievement.list.stats"><![CDATA[Statistik]]></item>
+		<item name="wcf.achievement.list.stats.detail"><![CDATA[Insgesamt {$earnedCount} Erfolg{if $earnedCount != 1}e{/if} errungen - {$earnedUsers} Benutzer - {$earnedPoints} Punkte]]></item>
+		<item name="wcf.achievement.publication"><![CDATA[Verbreiten]]></item>
+		<item name="wcf.achievement.publication.bbcode"><![CDATA[BB-Code]]></item>
+		<item name="wcf.achievement.publication.link"><![CDATA[Link]]></item>
+		<item name="wcf.achievement.information"><![CDATA[Informationen]]></item>
+		<item name="wcf.achievement.points"><![CDATA[Erfolgspunkte]]></item>
+		<item name="wcf.achievement.activityPoints"><![CDATA[Aktivitätspunkte]]></item>
+		<item name="wcf.achievement.detail"><![CDATA[Erfolgsdetails]]></item>
+		<item name="wcf.achievement.achievedBy"><![CDATA[Dieser Erfolg wurde von <a href="index.php?page=UserAchievementList&amp;userID={$userID}{@SID_ARG_2ND}">{$username}</a> ({@$time|shorttime}){if $count > 1} und {if $count == 2}einem {else}{#$count-1}{/if} Anderen{/if} errungen.]]></item>
+		<item name="wcf.achievement.achievedBy.title"><![CDATA[Dieser Erfolg wurde von {$username} ({$time|fulldate}){if $count > 1} und {if $count == 2}einem {else}{#$count-1}{/if} Anderen{/if} errungen.]]></item>
+		<item name="wcf.achievement.achievedBy.first"><![CDATA[Dieser Erfolg wurde erstmalig von <a href="index.php?page=UserAchievementList&amp;userID={$userID}{@SID_ARG_2ND}">{$username}</a> am {@$time|shorttime}{if $count > 1} und {if $count == 2}einem {else}{#$count-1}{/if} Anderen{/if} errungen.]]></item>
+		<item name="wcf.achievement.achievedBy.first.title"><![CDATA[Dieser Erfolg wurde erstmalig von {$username} am {$time|fulldate}{if $count > 1} und {if $count == 2}einem {else}{#$count-1}{/if} Anderen{/if} errungen.]]></item>
+		<item name="wcf.achievement.stats"><![CDATA[Statistik]]></item>
+		<item name="wcf.achievement.social.bookmarks"><![CDATA[Soziale Netzwerke]]></item>
+        <item name="wcf.achievement.category.system"><![CDATA[System]]></item>
+        <item name="wcf.achievement.category.system.description"><![CDATA[]]></item>
+        <item name="wcf.achievement.category.user"><![CDATA[Benutzer]]></item>
+		<item name="wcf.achievement.category.user.description"><![CDATA[]]></item>
+		<item name="wcf.achievement.category.user.social"><![CDATA[Soziales Netzwerk]]></item>
+		<item name="wcf.achievement.category.user.social.description"><![CDATA[]]></item>
+		<item name="wcf.achievement.category.user.communication"><![CDATA[Kommunikation]]></item>
+		<item name="wcf.achievement.category.user.communication.description"><![CDATA[]]></item>
+		<item name="wcf.achievement.list.ranking"><![CDATA[Erfolgreichste Benutzer]]></item>
+		<item name="wcf.achievement.list.ranking.username"><![CDATA[Benutzername]]></item>
+		<item name="wcf.achievement.list.ranking.points"><![CDATA[Erfolgspunkte]]></item>
+		<item name="wcf.achievement.copyright"><![CDATA[Erweiterung: <a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Erfolgsystem 1.0.0"><strong>Erfolgsystem 1.0.0</strong></a>, entwickelt von Kiv]]></item>
+		
+		<item name="wcf.achievement.level"><![CDATA[Stufe]]></item>
+		<item name="wcf.achievement.reward.title"><![CDATA[Belohnung]]></item>
+		
+		<item name="wcf.achievement.systemsearch.use"><![CDATA[Ich hab da was gefunden]]></item>
+		<item name="wcf.achievement.systemsearch.use.description"><![CDATA[Benutze erfolgreich die Suche.]]></item>
+				
+		<item name="wcf.achievement.achievement.first.1"><![CDATA[Erster!]]></item>
+		<item name="wcf.achievement.achievement.first.1.description"><![CDATA[Erreiche einen Erfolg als Erster.]]></item>	
+		<item name="wcf.achievement.achievement.first.10"><![CDATA[Erfolgsjäger]]></item>
+		<item name="wcf.achievement.achievement.first.10.description"><![CDATA[Erreiche zehn Erfolge als Erster.]]></item>
+		<item name="wcf.achievement.achievement.first.25"><![CDATA[Mit Hut und Peitsche]]></item>
+		<item name="wcf.achievement.achievement.first.25.description"><![CDATA[Erreiche fünfundzwanzig Erfolge als Erster.]]></item>
+
+		 <!-- user profile hits -->
+        <item name="wcf.achievement.userprofile.hits.10"><![CDATA[Wer ist eigentlich..?]]></item>
+		<item name="wcf.achievement.userprofile.hits.10.description"><![CDATA[Locke zehn Besucher auf dein Profil.]]></item>
+		<item name="wcf.achievement.userprofile.hits.100"><![CDATA[Wer ist eigentlich..?]]></item>
+		<item name="wcf.achievement.userprofile.hits.100.description"><![CDATA[Locke hundert Besucher auf dein Profil.]]></item>
+		<item name="wcf.achievement.userprofile.hits.1000"><![CDATA[Wer ist eigentlich..?]]></item>
+		<item name="wcf.achievement.userprofile.hits.1000.description"><![CDATA[Locke tausend Besucher auf dein Profil.]]></item>
+		<item name="wcf.achievement.userprofile.hits.10000"><![CDATA[Wer ist eigentlich..Rockstar!]]></item>
+		<item name="wcf.achievement.userprofile.hits.10000.description"><![CDATA[Locke zehntausend Besucher auf dein Profil.]]></item>
+		<!-- usersignature -->
+		<item name="wcf.achievement.usersignature.create"><![CDATA[Ein bleibender Eindruck]]></item>
+		<item name="wcf.achievement.usersignature.create.description"><![CDATA[Erstelle eine Signatur.]]></item>
+		<!-- useravatar -->
+		<item name="wcf.achievement.useravatar.create"><![CDATA[It'se me!]]></item>
+		<item name="wcf.achievement.useravatar.create.description"><![CDATA[Lade ein eigenes Avatar hoch.]]></item>
+		 <!-- friends -->
+		<item name="wcf.achievement.friends.1"><![CDATA[Ein neuer Freund]]></item>
+		<item name="wcf.achievement.friends.1.description"><![CDATA[Befreunde dich mit einem anderen Benutzer.]]></item>
+		<item name="wcf.achievement.friends.10"><![CDATA[Zehn neue Freunde]]></item>
+		<item name="wcf.achievement.friends.10.description"><![CDATA[Befreunde dich mit zehn anderen Benutzer.]]></item>
+		<item name="wcf.achievement.friends.25"><![CDATA[Fünfundzwanzig neue Freunde]]></item>
+		<item name="wcf.achievement.friends.25.description"><![CDATA[Befreunde dich mit fünfundzwanzig anderen Benutzer.]]></item>
+		<item name="wcf.achievement.friends.50"><![CDATA[Fünfzig neue Freunde]]></item>
+		<item name="wcf.achievement.friends.50.description"><![CDATA[Befreunde dich mit fünfzig anderen Benutzer.]]></item>
+		<item name="wcf.achievement.friends.100"><![CDATA[Hundert.. ach, ich hab den Überblick verloren!]]></item>
+		<item name="wcf.achievement.friends.100.description"><![CDATA[Befreunde dich mit hundert anderen Benutzer.]]></item>
+		
+		<item name="wcf.achievement.membership.1"><![CDATA[1 Monat Mitgliedschaft]]></item>
+		<item name="wcf.achievement.membership.1.description"><![CDATA[Du bist seit einem Monat Mitglied.]]></item>
+		<item name="wcf.achievement.membership.3"><![CDATA[3 Monate Mitgliedschaft]]></item>
+		<item name="wcf.achievement.membership.3.description"><![CDATA[Du bist seit drei Monaten Mitglied.]]></item>
+		<item name="wcf.achievement.membership.6"><![CDATA[6 Monate Mitgliedschaft]]></item>
+		<item name="wcf.achievement.membership.6.description"><![CDATA[Du bist seit sechs Monaten Mitglied.]]></item>
+		<item name="wcf.achievement.membership.12"><![CDATA[1 Jahr Mitgliedschaft]]></item>
+		<item name="wcf.achievement.membership.12.description"><![CDATA[Du bist seit einem Jahr Mitglied.]]></item>
+		<item name="wcf.achievement.membership.24"><![CDATA[2 Jahre Mitgliedschaft]]></item>
+		<item name="wcf.achievement.membership.24.description"><![CDATA[Du bist seit zwei Jahren Mitglied.]]></item>
+		<item name="wcf.achievement.membership.60"><![CDATA[5 Jahre Mitgliedschaft]]></item>
+		<item name="wcf.achievement.membership.60.description"><![CDATA[Du bist seit fünf Jahren Mitglied.]]></item>
+		<item name="wcf.achievement.membership.120"><![CDATA[10 Jahre Mitgliedschaft]]></item>
+		<item name="wcf.achievement.membership.120.description"><![CDATA[Du bist seit zehn Jahren Mitglied.]]></item>
+		
+		<item name="wcf.achievement.userprofile.visits.10"><![CDATA[Schau doch mal wieder vorbei]]></item>
+		<item name="wcf.achievement.userprofile.visits.10.description"><![CDATA[Besuche zehn Profile.]]></item>		
+		<item name="wcf.achievement.userprofile.visits.100"><![CDATA[Schau doch mal wieder vorbei]]></item>
+		<item name="wcf.achievement.userprofile.visits.100.description"><![CDATA[Besuche hundert Profile.]]></item>		
+		<item name="wcf.achievement.userprofile.visits.1000"><![CDATA[Schau doch mal wieder vorbei]]></item>
+		<item name="wcf.achievement.userprofile.visits.1000.description"><![CDATA[Besuche tausend Profile.]]></item>		
+		<item name="wcf.achievement.userprofile.visits.10000"><![CDATA[Schau doch mal wieder vorbei]]></item>
+		<item name="wcf.achievement.userprofile.visits.10000.description"><![CDATA[Besuche zehntausend Profile.]]></item>	
+		
+		<item name="wcf.achievement.pm.1"><![CDATA[Buschfunk]]></item>
+		<item name="wcf.achievement.pm.1.description"><![CDATA[Verschicke eine private Nachricht.]]></item>
+		<item name="wcf.achievement.pm.10"><![CDATA[Buschfunk]]></item>
+		<item name="wcf.achievement.pm.10.description"><![CDATA[Verschicke zehn private Nachrichten.]]></item>
+		<item name="wcf.achievement.pm.25"><![CDATA[Buschfunk]]></item>
+		<item name="wcf.achievement.pm.25.description"><![CDATA[Verschicke 25 private Nachrichten.]]></item>
+		<item name="wcf.achievement.pm.50"><![CDATA[Buschfunk]]></item>
+		<item name="wcf.achievement.pm.50.description"><![CDATA[Verschicke 50 private Nachrichten.]]></item>
+		<item name="wcf.achievement.pm.100"><![CDATA[Buschfunk]]></item>
+		<item name="wcf.achievement.pm.100.description"><![CDATA[Verschicke 100 private Nachrichten.]]></item>		
+		
+		<item name="wcf.achievement.attachments.1"><![CDATA[Anhängsel]]></item>
+		<item name="wcf.achievement.attachments.1.description"><![CDATA[Lade einen Anhang hoch.]]></item>		
+		<item name="wcf.achievement.attachments.5"><![CDATA[Anhängsel]]></item>
+		<item name="wcf.achievement.attachments.5.description"><![CDATA[Lade fünf Anhänge hoch.]]></item>
+		<item name="wcf.achievement.attachments.10"><![CDATA[Anhängsel]]></item>
+		<item name="wcf.achievement.attachments.10.description"><![CDATA[Lade zehn Anhänge hoch.]]></item>
+		<item name="wcf.achievement.attachments.25"><![CDATA[Anhängsel]]></item>
+		<item name="wcf.achievement.attachments.25.description"><![CDATA[Lade 25 Anhänge hoch.]]></item>
+		<item name="wcf.achievement.attachments.50"><![CDATA[Anhängsel]]></item>
+		<item name="wcf.achievement.attachments.50.description"><![CDATA[Lade 50 Anhänge hoch.]]></item>
+		<item name="wcf.achievement.attachments.100"><![CDATA[Anhängsel]]></item>
+		<item name="wcf.achievement.attachments.100.description"><![CDATA[Lade 100 Anhänge hoch.]]></item>
+		
+		<item name="wcf.achievement.password.change"><![CDATA[Auf Nummer sicher]]></item>
+		<item name="wcf.achievement.password.change.description"><![CDATA[Ändere deine Passwort.]]></item>		
+		<item name="wcf.achievement.username.change"><![CDATA[Ich bin neu hier *hust*]]></item>
+		<item name="wcf.achievement.username.change.description"><![CDATA[Ändere deinen Benutzernamen.]]></item>		
+		<item name="wcf.achievement.logout"><![CDATA[Ich bin weg]]></item>
+		<item name="wcf.achievement.logout.description"><![CDATA[Melde dich erfolgreich ab.]]></item>		
+		<item name="wcf.achievement.style"><![CDATA[Stilsicher]]></item>
+		<item name="wcf.achievement.style.description"><![CDATA[Entdecke einen anderen Stil.]]></item>	
+		<item name="wcf.achievement.register"><![CDATA[Ein neues Gesicht]]></item>
+		<item name="wcf.achievement.register.description"><![CDATA[Registriere dich.]]></item>
+		
+		<item name="wcf.achievement.session.init.10"><![CDATA[Besucher]]></item>
+		<item name="wcf.achievement.session.init.10.description"><![CDATA[Besuche unsere Webseite zehn Mal.]]></item>
+		<item name="wcf.achievement.session.init.100"><![CDATA[Besucher]]></item>
+		<item name="wcf.achievement.session.init.100.description"><![CDATA[Besuche unsere Webseite hundert Mal.]]></item>
+		<item name="wcf.achievement.session.init.500"><![CDATA[Besucher]]></item>
+		<item name="wcf.achievement.session.init.500.description"><![CDATA[Besuche unsere Webseite 500 Mal.]]></item>
+		<item name="wcf.achievement.session.init.1000"><![CDATA[Besucher]]></item>
+		<item name="wcf.achievement.session.init.1000.description"><![CDATA[Besuche unsere Webseite 1000 Mal.]]></item>
+		<item name="wcf.achievement.session.init.2500"><![CDATA[Besucher]]></item>
+		<item name="wcf.achievement.session.init.2500.description"><![CDATA[Besuche unsere Webseite 2500 Mal.]]></item>
+		<item name="wcf.achievement.session.init.5000"><![CDATA[Besucher]]></item>
+		<item name="wcf.achievement.session.init.5000.description"><![CDATA[Besuche unsere Webseite 5000 Mal.]]></item>
+		<item name="wcf.achievement.session.init.10000"><![CDATA[Besucher]]></item>
+		<item name="wcf.achievement.session.init.10000.description"><![CDATA[Besuche unsere Webseite 10000 Mal.]]></item>
+		
+		<item name="wcf.achievement.holiday.halloween"><![CDATA[Süßes oder Saures]]></item>
+		<item name="wcf.achievement.holiday.halloween.description"><![CDATA[Besuche uns an Halloween!]]></item>
+		<item name="wcf.achievement.holiday.christmas"><![CDATA[Ohhh.. Geschenkeee!]]></item>
+		<item name="wcf.achievement.holiday.christmas.description"><![CDATA[Besuche uns an Heiligabend!]]></item>
+		<item name="wcf.achievement.holiday.newyear"><![CDATA[Dieses Jahr ganz sicher..!]]></item>
+		<item name="wcf.achievement.holiday.newyear.description"><![CDATA[Besuche uns an Neujahr!]]></item>
+		<item name="wcf.achievement.holiday.valentine"><![CDATA[Liebe liegt in der Luft]]></item>
+		<item name="wcf.achievement.holiday.valentine.description"><![CDATA[Besuche uns am Valentinstag!]]></item>
+		<item name="wcf.achievement.holiday.easteregg"><![CDATA[Ein besonderer Tag!]]></item>
+		<item name="wcf.achievement.holiday.easteregg.description"><![CDATA[Entdecke ein "Easter Egg". ;)]]></item>
+		
+		<item name="wcf.achievement.category.collection"><![CDATA[Meta]]></item>
+		<item name="wcf.achievement.category.collection.description"><![CDATA[]]></item>
+		<item name="wcf.achievement.holiday.collection"><![CDATA[Freie Tage sind die besten Tage]]></item>
+		<item name="wcf.achievement.holiday.collection.description"><![CDATA[Erreiche alle unten aufgelisteten Erfolge.]]></item>
+	</category>
+	
+	<category name="wcf.achievement.plugin">
+		<item name="wcf.achievement.plugin.information"><![CDATA[Informationen zu &raquo;{$package->packageName}&laquo;]]></item>
+		<item name="wcf.achievement.plugin.author"><![CDATA[Autor]]></item>
+		<item name="wcf.achievement.plugin.license"><![CDATA[Lizenz]]></item>
+		<item name="wcf.achievement.plugin.website"><![CDATA[Website]]></item>
+		<item name="wcf.achievement.plugin.version"><![CDATA[Version]]></item>
+		<item name="wcf.achievement.plugin.icons"><![CDATA[Icons]]></item>
+	</category>
+	
+	<category name="wcf.achievement.reward">
+		<item name="wcf.achievement.reward.type.userrank"><![CDATA[Neuer Benutzertitel]]></item>
+		<item name="wcf.achievement.reward.type.groupoption"><![CDATA[Erweiterte Berechtigung]]></item>
+		<item name="wcf.achievement.reward.type.avatar"><![CDATA[Neuer Avatar]]></item>
+		
+		<item name="wcf.achievement.reward.holiday.collection.rank"><![CDATA[Faulpelz]]></item>
+		<item name="wcf.achievement.reward.signature.rank"><![CDATA[Signator]]></item>
+		<item name="wcf.achievement.reward.achievement.first.rank"><![CDATA[Grabjäger]]></item>
+	</category>	
+	
+	<category name="wcf.bbcode">
+		<item name="wcf.bbcode.achievement.title"><![CDATA[Erfolg einfügen]]></item>
+	</category>	
+	
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.module_achievement_system"><![CDATA[Erfolge]]></item>
+		<item name="wcf.acp.option.module_achievement_system.description"><![CDATA[Aktiviert das Erfolgssystem für Benutzer.]]></item>
+		<item name="wcf.acp.option.category.user.achievements"><![CDATA[Erfolge]]></item>
+		<item name="wcf.acp.option.category.user.achievements.description"><![CDATA[]]></item>
+		<item name="wcf.acp.option.achievement_system_enable_activity_points"><![CDATA[Aktivitätspunktevergabe aktivieren]]></item>
+		<item name="wcf.acp.option.achievement_system_enable_activity_points.description"><![CDATA[Aktiviere diese Option, wenn ebenfalls Aktivitätspunkte für Erfolge vergeben werden sollen.]]></item>
+		<item name="wcf.acp.option.achievement_system_flooding"><![CDATA[Erfolgssperre [Sekunden]]]></item>
+		<item name="wcf.acp.option.achievement_system_flooding.description"><![CDATA[Gib an, wielange die Sperre zwischen dem Zählen von Zugriffen für Erfolge(Themen gelesen, usw.) gültig ist.]]></item>
+		<item name="wcf.acp.option.achievement_system_latest_entries"><![CDATA[Letzte Erfolge]]></item>
+		<item name="wcf.acp.option.achievement_system_latest_entries.description"><![CDATA[Gib an, wieviele Erfolge unter "Letzte Erfolge" in der Übersicht aufgelistet werden sollen.]]></item>
+		<item name="wcf.acp.option.achievement_system_audio_notification"><![CDATA[Audiowiedergabe aktivieren?]]></item>
+		<item name="wcf.acp.option.achievement_system_audio_notification.description"><![CDATA[Aktiviere diese Option, wenn ein Sound bei einem neuen Erfolg abgespielt werden soll.]]></item>
+	</category>
+	
+	<category name="wcf.acp.package">
+		<item name="wcf.acp.package.step.install.AchievementPackageInstallationPlugin"><![CDATA[Erfolge werden installiert ...]]></item>
+		<item name="wcf.acp.package.step.install.AchievementObjectPackageInstallationPlugin"><![CDATA[Erfolgsobjekte werden installiert ...]]></item>
+		<item name="wcf.acp.package.step.install.AchievementRewardPackageInstallationPlugin"><![CDATA[Erfolgsbelohnungen werden installiert ...]]></item>
+	</category>
+	
+	<category name="wcf.acp.achievement">
+		<item name="wcf.acp.achievement.award.description"><![CDATA[Dieser Prozess versucht alle erreichten Erfolge automatisch an die jeweiligen Benutzer zuvergeben. Bitte beachte, dass nicht alle Erfolge berücksichtigt werden.]]></item>
+	</category>
+
+	<category name="wcf.user.achievement.notification">
+		<item name="wcf.user.achievement.notification.unlockAchievement"><![CDATA[Glückwunsch! Du hast den Erfolg <a class="achievement" href="index.php?page=Achievement&amp;achievementID={@$achievement->achievementID}{@SID_ARG_2ND}">{if $achievement->achievementIcon}<img src="{RELATIVE_WCF_DIR}{@$achievement->achievementIcon}" title="{lang}{$achievement->languageCategory}.{$achievement->achievementName}{/lang}" /> {/if}{lang}{$achievement->languageCategory}.{$achievement->achievementName}{/lang}</a> errungen.]]></item>
+		<item name="wcf.user.achievement.notification.unlockAchievement.userMessages"><![CDATA[Glückwunsch! Du hast den Erfolg <a class="achievement" href="index.php?page=Achievement&amp;achievementID={@$achievement->achievementID}{@SID_ARG_2ND}">{if $achievement->achievementIcon}<img src="{RELATIVE_WCF_DIR}{@$achievement->achievementIcon}" title="{lang}{$achievement->languageCategory}.{$achievement->achievementName}{/lang}" /> {/if}{lang}{$achievement->languageCategory}.{$achievement->achievementName}{/lang}</a> errungen.]]></item>		
+		<item name="wcf.user.achievement.notification.unlockAchievement.animation"><![CDATA[Glückwunsch! Du hast den Erfolg <a class="achievement" href="index.php?page=Achievement&amp;achievementID={@$achievement->achievementID}{@SID_ARG_2ND}">{if $achievement->achievementIcon}<img src="{RELATIVE_WCF_DIR}{@$achievement->achievementIcon}" title="{lang}{$achievement->languageCategory}.{$achievement->achievementName}{/lang}" /> {/if}{lang}{$achievement->languageCategory}.{$achievement->achievementName}{/lang}</a> errungen.]]></item>		
+		<item name="wcf.user.achievement.notification.gainAchievementReward"><![CDATA[Du hast die Belohnung: {lang}wcf.achievement.reward.type.{$reward->rewardType|strtolower}{/lang}</strong> &raquo;{lang}{$achievement->languageCategory}.reward.{$reward->rewardName|strtolower}{/lang}&laquo; erhalten.]]></item>
+		<item name="wcf.user.achievement.notification.gainAchievementReward.userMessages"><![CDATA[Du hast die Belohnung: {lang}wcf.achievement.reward.type.{$reward->rewardType|strtolower}{/lang}</strong> &raquo;{lang}{$achievement->languageCategory}.reward.{$reward->rewardName|strtolower}{/lang}&laquo; erhalten.]]></item>
+	</category>
+	
+	<category name="wcf.user.notification">
+		<item name="wcf.user.notification.object.type.userAchievement"><![CDATA[Erfolge]]></item>
+		<item name="wcf.user.notification.object.type.userAchievementReward"><![CDATA[Belohnung]]></item>
+		<item name="wcf.user.achievement.notification.unlockAchievement.title"><![CDATA[Erfolg errungen]]></item>
+		<item name="wcf.user.achievement.notification.unlockAchievement.description"><![CDATA[Du erhälst eine neue Benachrichtigung, wenn du einen neuen Erfolg erhalten hast.]]></item>
+		<item name="wcf.user.achievement.notification.gainAchievementReward.title"><![CDATA[Belohnung erhalten]]></item>
+		<item name="wcf.user.achievement.notification.gainAchievementReward.description"><![CDATA[Du erhälst eine neue Benachrichtigung, wenn du eine Belohnung durch einen Erfolg erhalten hast.]]></item>
+		
+	</category>
+
+    <category name="wcf.user.profile">
+		<item name="wcf.user.profile.achievements"><![CDATA[Erfolge]]></item>
+        <item name="wcf.user.profile.lastAchievements"><![CDATA[Letzte Erfolge]]></item>
+        <item name="wcf.user.profile.allAchievements"><![CDATA[Alle Erfolge anzeigen]]></item>
+        <item name="wcf.user.profile.menu.link.achievements"><![CDATA[Erfolge]]></item>
+	</category>
+	
+	<category name="wcf.header.menu">
+		<item name="wcf.header.menu.achievements"><![CDATA[Erfolge]]></item>
+	</category>
+	
+	<category name="wcf.user.option">
+		<item name="wcf.user.option.category.settings.privacy.achievement"><![CDATA[Erfolge]]></item>
+		<item name="wcf.user.option.hideAchievements"><![CDATA[Erfolge verstecken?]]></item>
+		<item name="wcf.user.option.hideAchievements.description"><![CDATA[Aktiviere diese Option, wenn du deine Erfolge vor anderen Benutzern verstecken willst.]]></item>
+	</category>
+	
+	<category name="wcf.acp.menu">
+		<item name="wcf.acp.menu.link.user.achievements"><![CDATA[Erfolge]]></item>
+		<item name="wcf.acp.menu.link.user.achievements.list"><![CDATA[Erfolge auflisten]]></item>
+		<item name="wcf.acp.menu.link.user.achievements.list.description"><![CDATA[]]></item>
+		<item name="wcf.acp.menu.link.user.achievements.add"><![CDATA[Erfolg hinzufügen]]></item>
+		<item name="wcf.acp.menu.link.user.achievements.add.description"><![CDATA[]]></item>
+		<item name="wcf.acp.menu.link.user.achievements.award"><![CDATA[Erfolge vergeben]]></item>
+		<item name="wcf.acp.menu.link.user.achievements.award.description"><![CDATA[]]></item>
+	</category>		
+	
+	<category name="wcf.acp.group">
+		<item name="wcf.acp.group.option.category.user.achievements"><![CDATA[Erfolge]]></item>
+		<item name="wcf.acp.group.option.category.user.achievements.description"><![CDATA[]]></item>
+		<item name="wcf.acp.group.option.category.admin.achievements"><![CDATA[Erfolge]]></item>
+		<item name="wcf.acp.group.option.category.admin.achievements.description"><![CDATA[]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canEarnAchievements"><![CDATA[Kann Erfolge erringen]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canEarnAchievements.description"><![CDATA[Mitglieder dieser Benutzergruppen können Erfolge erringen.]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canViewAchievement"><![CDATA[Kann Erfolg ansehen]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canViewAchievement.description"><![CDATA[Mitglieder dieser Benutzergruppen können Erfolge ansehen.]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canViewAchievementList"><![CDATA[Kann Erfolgsliste ansehen]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canViewAchievementList.description"><![CDATA[Mitglieder dieser Benutzergruppen können die Erfolgsliste ansehen.]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canHideAchievements"><![CDATA[Kann Erfolge verstecken]]></item>
+		<item name="wcf.acp.group.option.user.achievements.canHideAchievements.description"><![CDATA[Mitglieder dieser Benutzergruppen können ihre Erfolge vor anderen verstecken.]]></item>
+		<item name="wcf.acp.group.option.admin.achievements.canAwardAchievements"><![CDATA[Kann Erfolge automatisch vergeben lassen]]></item>
+		<item name="wcf.acp.group.option.admin.achievements.canAwardAchievements.description"><![CDATA[Mitglieder dieser Benutzergruppen können Erfolge automatisch vergeben lassen.]]></item>
+	</category>
+	
+	<category name="wcf.user.achievement.location">
+		<item name="wcf.user.achievement.location.profile"><![CDATA[Erfolge von &raquo;<a href="index.php?page=User&amp;userID={$userID}{@SID_ARG_2ND}">{@$username}</a>&laquo;]]></item>
+		<item name="wcf.user.achievement.location.achievement"><![CDATA[Details von &raquo;<a href="index.php?page=Achievement&amp;achievementID={@$achievement->achievementID}{@SID_ARG_2ND}">{@$achievement->getTitle()}</a>&laquo;]]></item>
+		<item name="wcf.user.achievement.location.list"><![CDATA[Alle Erfolge der Kategorie &raquo;<a href="index.php?page=AchievementList&amp;categoryID={$categoryID}{@SID_ARG_2ND}">{@$category.categoryName}</a>&laquo;]]></item>
+	</category>
+</language>

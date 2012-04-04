@@ -1,0 +1,123 @@
+/**
+ * @author		Jeffrey 'Kiv' Reichardt
+ * @copyright	2011-2012 devlabor.com
+ * @package     	com.devlabor.achievements
+ * @license		CC BY-NC-SA 3.0 <http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode>
+ * @subpackage	style
+ */
+
+.achievementCard{ 
+	margin: 5px 0; 
+	min-width: 550px;
+	max-width: 550px;
+}
+.achievementCard, .achievementCard .container-1, .achievementCard .container-2, .achievementCard .container-3{ overflow:hidden; min-height: 72px; }
+.achievementCard .containerIcon, .achievementCard .containerContent, .achievementCard .containerPoints{  padding: 2px 0; float:left; }
+
+.achievementCard .containerIcon, .achievementCard .containerPoints{ margin-left: 0; width: 70px; }
+.achievementCard .containerContent{ width: 390px; margin-left: 10px; padding: 2px 0;}
+
+.message .achievementCard  h3, .message .achievementCard  h4{ padding-top: 0; }
+.achievementCard  h3{ font-size: 1.2em; font-weight: bold !important; }
+.achievementCard  h3.subHeadline{ padding-bottom: 5px; margin-top: 5px; margin-bottom: 5px !important }
+
+.achievementCard .containerIcon ul li,.achievementCard .containerPoints ul li{ margin-top: 5px; min-width:  60px ; }
+.achievementCard .containerIcon ul li a,.achievementCard .containerPoints ul li a{ min-height: 50px !important; padding: 2px; }
+.achievementCard .containerIcon ul li a img{ margin:auto; }
+.achievementCard .containerPoints ul li a h2{ text-align:center; font-size: 1.9em; }
+
+.relatedAchievements{ list-style: none outside none; margin-top: 10px; padding: 0; font-size: 0.95em; }
+.relatedAchievements li{ font-style: italic; }
+
+.achievementCard  .progressBarContainer{ margin: 5px 15px; text-align:center;}
+.achievementCard  .progressBarContainer span{ vertical-align: top; width: 15%; float:right; }
+.achievementCard  .progressBarContainer:after{ content:""; clear:both; }
+.achievementCard  .progressBar { width: 80%; border-color: #858585; border-style: solid; border-width: 1px; padding: 1px; float:left; }
+.achievementCard  .progressBar div{ background-color: #00CC00; border-bottom: 6px solid #00AA00; height: 6px; }
+
+#animationNotificationContainer{
+	position:fixed;
+	display:block;
+	width:454px;
+	height:225px;
+	left:50%;
+	bottom:50px;
+	margin:0 0 0 -226px;
+}
+
+.animationNotification{ 
+	width: 554px; 
+	position: relative;
+	overflow: hidden;
+}
+
+.animationNotification .shineLayer{
+	position:absolute; 
+	z-index: 99999;
+	top: -40px; 
+	
+	/* gradient */
+	background-image: linear-gradient(left , rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%);
+	background-image: -o-linear-gradient(left , rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%);
+	background-image: -moz-linear-gradient(left , rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%);
+	background-image: -webkit-linear-gradient(left , rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%);
+	background-image: -ms-linear-gradient(left , rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(0, rgba(255,255,255, 0)),
+		color-stop(1, rgba(255,255,255, 1))
+	);
+	
+	-webkit-transform:rotate(20deg);  
+	   -moz-transform:rotate(20deg);  
+		 -o-transform:rotate(20deg);  
+			transform:rotate(20deg); 
+}
+
+.pluginCopyright{
+	clear: both;
+    padding: 10px 0 7px;
+    text-align: center;
+    white-space: nowrap;
+}
+.pluginCopyright a{
+	text-decoration: none;
+}
+
+.achievementCardOptions{
+	float:right;
+	margin-right: 5px;
+}
+	
+.metaList ul li{
+	display: inline;
+	float:none;
+}
+.metaList ul li a{ background-color: #4595e5; }
+.metaList ul li img{ margin: 2px; }
+
+.reward{ margin: 10px 0 5px; text-align: center;  }
+
+#tplAchievement .socialBookmarks {
+    float: left;
+    margin: 7px 0 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+#tplAchievement .socialBookmarks:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+#tplAchievement .socialBookmarks li {
+    float: left;
+    list-style: none outside none;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.message .messageTop .userCredits.achievementMessageSidebar{ padding: 0 15px; }

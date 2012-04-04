@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/bbcodes.xsd">
+	<import>
+		<bbcode name="achievement">
+			<classname>AchievementBBCode</classname>
+			<allowedchildren>none</allowedchildren>
+			<wysiwygicon>insertAchievement.png</wysiwygicon>
+			<options>module_achievement_system</options>
+		</bbcode>
+	</import>
+</data>

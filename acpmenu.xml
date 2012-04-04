@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/acpmenu.xsd">
+	<import>
+		<acpmenuitem name="wcf.acp.menu.link.user.achievements">
+			<parent>wcf.acp.menu.link.user</parent>
+			<showorder>10</showorder>
+			<options>module_achievement_system</options>
+		</acpmenuitem>
+
+		<acpmenuitem name="wcf.acp.menu.link.user.achievements.award">
+			<parent>wcf.acp.menu.link.user.achievements</parent>
+			<showorder>3</showorder>
+			<link>index.php?form=AchievementAward</link>
+			<permissions>admin.achievements.canAwardAchievements</permissions>
+			<icon>icon/achievementM.png</icon>
+		</acpmenuitem>
+	</import>
+</data>

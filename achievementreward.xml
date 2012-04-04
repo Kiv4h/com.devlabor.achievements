@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.devlabor.com/XSD/achievement-object.xsd">
+	<import>
+		<reward>
+			<name>holiday.collection.rank</name>
+			<type>UserRank</type>
+			<value>wcf.achievement.reward.holiday.collection.rank</value>
+		</reward>
+		<reward>
+			<name>signature.rank</name>
+			<type>UserRank</type>
+			<value>wcf.achievement.reward.signature.rank</value>
+		</reward>
+		<reward>
+			<name>achievement.first.rank</name>
+			<type>UserRank</type>
+			<value>wcf.achievement.reward.achievement.first.rank</value>
+		</reward>
+	</import>
+</data>

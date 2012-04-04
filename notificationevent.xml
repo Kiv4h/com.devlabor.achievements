@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/notification-event.xsd">
+	<import>
+		<event>
+			<name>unlockAchievement</name>
+            <objecttype>userAchievement</objecttype>
+			<classfile>lib/data/user/notification/event/UserAchievementNotificationEvent.class.php</classfile>
+            <languagecategory>wcf.user.achievement.notification</languagecategory>
+            <defaultnotificationtype>animation</defaultnotificationtype>
+            <icon>achievement</icon>
+            <requiresconfirmation>0</requiresconfirmation>
+			<options>module_achievement_system</options>
+		</event>
+		<event>
+			<name>gainAchievementReward</name>
+            <objecttype>userAchievementReward</objecttype>
+			<classfile>lib/data/user/notification/event/UserAchievementRewardNotificationEvent.class.php</classfile>
+            <languagecategory>wcf.user.achievement.notification</languagecategory>
+            <defaultnotificationtype>userMessages</defaultnotificationtype>
+            <icon>achievementReward</icon>
+            <requiresconfirmation>0</requiresconfirmation>
+			<options>module_achievement_system</options>
+		</event>
+	</import>
+</data>

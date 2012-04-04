@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/groupoptions.xsd">
+	<import>
+		<categories>
+            <category name="user.achievements">
+				<parent>user</parent>
+				<options>module_achievement_system</options>
+			</category>      
+			<category name="admin.achievements">
+				<parent>admin</parent>
+				<options>module_achievement_system</options>
+			</category>
+		</categories>
+		
+		<options>
+			<option name="user.achievements.canEarnAchievements">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+            <option name="user.achievements.canViewAchievement">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+            <option name="user.achievements.canViewAchievementList">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+            <option name="user.achievements.canHideAchievements">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+
+            <option name="admin.achievements.canAwardAchievements">
+				<categoryname>admin.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>			
+		</options>
+	</import>
+</data>

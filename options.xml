@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/options.xsd">
+	<import>
+        <categories>
+			<category name="user.achievements">
+				<parent>user</parent>
+				<options>module_achievement_system</options>
+			</category>
+		</categories>		
+		<options>
+            <option name="module_achievement_system">
+				<categoryname>module.user</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+			
+			<option name="achievement_system_enable_activity_points">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+			<option name="achievement_system_flooding">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>20</defaultvalue>
+			</option>
+			<option name="achievement_system_latest_entries">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>5</defaultvalue>
+			</option>
+			<option name="achievement_system_audio_notification">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+		</options>
+	</import>
+	<delete>
+		<option name="achievement_system_auto_awarding" />
+	</delete>
+</data>

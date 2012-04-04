@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/pagelocation.xsd">	
+	<import>
+		<pagelocation name="wcf.user.achievement.location.profile">
+			<pattern><![CDATA[index\.php\?page=UserAchievementList&.*userID=(\d+)]]></pattern>
+			<classpath>lib/data/page/location/UserAchievementListLocation.class.php</classpath>
+		</pagelocation>
+		<pagelocation name="wcf.user.achievement.location.achievement">
+			<pattern><![CDATA[index\.php\?page=Achievement&.*achievementID=(\d+)]]></pattern>
+			<classpath>lib/data/page/location/AchievementLocation.class.php</classpath>
+		</pagelocation>
+		<pagelocation name="wcf.user.achievement.location.list">
+			<pattern><![CDATA[index\.php\?page=AchievementList&.*categoryID=(\d+)]]></pattern>
+			<classpath>lib/data/page/location/AchievementListLocation.class.php</classpath>
+		</pagelocation>
+	</import>
+</data>		

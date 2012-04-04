@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package name="com.devlabor.achievements" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/package.xsd">
+	<packageinformation>
+		<packagename><![CDATA[Achievementsystem]]></packagename>
+		<packagedescription languagecode="de"><![CDATA[Das komfortable Erfolgsystem für das WoltLab Community Framework.]]></packagedescription>
+		<packagedescription languagecode="de-informal"><![CDATA[Das komfortable Erfolgsystem für das WoltLab Community Framework.]]></packagedescription>
+		<packagedescription languagecode="en"><![CDATA[The comfortable achievementsystem based on WoltLab Community Framework.]]></packagedescription>
+		<version>1.0.2</version>
+		<date>2012-01-29</date>
+        <isunique>1</isunique>
+	</packageinformation>
+
+	<authorinformation>
+		<author><![CDATA[Jeffrey Reichardt]]></author>
+		<authorurl><![CDATA[http://www.devlabor.com]]></authorurl>
+	</authorinformation>
+
+  	<requiredpackages>
+		<requiredpackage minversion="1.1.2">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.page.user.profile</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.data.message.bbcode</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.data.message.search</requiredpackage>
+		<!-- page location -->
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.form.user.signature</requiredpackage>
+		<requiredpackage minversion="1.0.0">com.woltlab.wcf.message.sidebar</requiredpackage>
+		
+		<requiredpackage minversion="1.0.0" file="http://update.woltlab.com/tempest/?packageName=com.woltlab.wcf.socialBookmarks">com.woltlab.wcf.socialBookmarks</requiredpackage>
+        <requiredpackage minversion="1.0.11" file="required/com.woltlab.community.wcf.user.notification.tar.gz">com.woltlab.community.wcf.user.notification</requiredpackage>
+	</requiredpackages>
+
+	<instructions type="install">
+		<sql>install.sql</sql>
+	
+		<files>files.tar</files>
+		<templates>templates.tar</templates>
+		<acptemplates>acptemplates.tar</acptemplates>
+        <packageinstallationplugins>pip.tar</packageinstallationplugins>
+
+		<eventlistener>eventlistener.xml</eventlistener>
+		<options>options.xml</options>
+		<bbcodes>bbcodes.xml</bbcodes>
+		
+        <achievementobject>achievementobject.xml</achievementobject>
+        <achievement>achievement.xml</achievement>
+		<achievementreward>achievementreward.xml</achievementreward>
+
+        <notificationobjecttype>notificationobjecttype.xml</notificationobjecttype>
+        <notificationevent>notificationevent.xml</notificationevent>
+		<notificationtype>notificationtype.xml</notificationtype>
+        <userprofilemenu>userprofilemenu.xml</userprofilemenu>
+        <pagelocation>pagelocation.xml</pagelocation>
+        <pagemenu>pagemenu.xml</pagemenu>
+        <groupoptions>groupoptions.xml</groupoptions>
+        <useroptions>useroptions.xml</useroptions>
+		<acpmenu>acpmenu.xml</acpmenu>
+		<cronjobs>cronjobs.xml</cronjobs>
+
+		<languages languagecode="de">lang/de.xml</languages>
+		<languages languagecode="de-informal">lang/de-informal.xml</languages>
+		<languages languagecode="en">lang/en.xml</languages>
+	</instructions>
+	
+	<instructions type="update" fromversion="1.0.0">
+		<files>files.tar</files>
+		<templates>templates.tar</templates>
+		<packageinstallationplugins>pip.tar</packageinstallationplugins>
+	
+		<options>options.xml</options>
+	
+        <achievementobject>achievementobject.xml</achievementobject>
+		
+		<languages languagecode="de">lang/de.xml</languages>
+		<languages languagecode="de-informal">lang/de-informal.xml</languages>
+		<languages languagecode="en">lang/en.xml</languages>		
+	</instructions>	
+	
+	<instructions type="update" fromversion="1.0.1">
+		<files>files.tar</files>
+		<templates>templates.tar</templates>
+		
+		<languages languagecode="de">lang/de.xml</languages>
+		<languages languagecode="de-informal">lang/de-informal.xml</languages>
+		<languages languagecode="en">lang/en.xml</languages>		
+	</instructions>
+</package>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/userprofilemenu.xsd">	
+	<import>
+		<userprofilemenuitem name="wcf.user.profile.menu.link.achievements">
+			<icon>achievementM.png</icon>
+			<link>index.php?page=UserAchievementList&amp;userID=%s</link>
+			<options>module_achievement_system</options>
+			<showorder>5</showorder>
+		</userprofilemenuitem>
+	</import>
+</data>
