@@ -1,2 +1,7 @@
 
 /todo.txt
+*.gz
+*.tar
+*
+*.tar
+/required/com.woltlab.community.wcf.user.notification.tar.gz
