@@ -78,6 +78,9 @@
 		<files>files.tar</files>
 		<templates>templates.tar</templates>
 		
+		<achievementobject>achievementobject.xml</achievementobject>
+		<achievement>achievement.xml</achievement>
+		
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
 		<languages languagecode="en">lang/en.xml</languages>		

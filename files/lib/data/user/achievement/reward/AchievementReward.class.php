@@ -128,7 +128,7 @@ class AchievementReward extends DatabaseObject{
 		$result = WCF::getDB()->sendQuery($sql);
 		
 		while ($row = WCF::getDB()->fetchArray($result)) {
-			$defaultValues[] = array('optionID' => $row['optionID'], 'optionValue' => (is_int($row['defaultValue']) ? 0 : '' );	
+			$defaultValues[] = array('optionID' => $row['optionID'], 'optionValue' => (is_int($row['defaultValue']) ? 0 : '' ));	
 		}
 
 		return $defaultValues;

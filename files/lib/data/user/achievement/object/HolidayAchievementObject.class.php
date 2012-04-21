@@ -24,7 +24,7 @@ class HolidayAchievementObject extends AbstractAchievementObject{
 		if($eventObj === NULL) return;
 		
 		foreach($this->availableAchievements as $achievement){
-			if(gmdate("dm", TIME_NOW) == $achievement->objectQuantity){
+			if(gmdate("md", TIME_NOW) == str_pad($achievement->objectQuantity, 4, "0", STR_PAD_LEFT)){
 				$achievement->awardToUser($this->user->userID);
 			}
 		}
