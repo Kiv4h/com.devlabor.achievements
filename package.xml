@@ -59,24 +59,13 @@
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
 		<languages languagecode="en">lang/en.xml</languages>
 	</instructions>
-	
-	<instructions type="update" fromversion="1.0.0">
+
+	<instructions type="update" fromversion="1.0.*">
 		<files>files.tar</files>
 		<templates>templates.tar</templates>
 		<packageinstallationplugins>pip.tar</packageinstallationplugins>
 	
 		<options>options.xml</options>
-	
-        <achievementobject>achievementobject.xml</achievementobject>
-		
-		<languages languagecode="de">lang/de.xml</languages>
-		<languages languagecode="de-informal">lang/de-informal.xml</languages>
-		<languages languagecode="en">lang/en.xml</languages>		
-	</instructions>	
-	
-	<instructions type="update" fromversion="1.0.1">
-		<files>files.tar</files>
-		<templates>templates.tar</templates>
 		
 		<achievementobject>achievementobject.xml</achievementobject>
 		<achievement>achievement.xml</achievement>
