@@ -75,3 +75,7 @@ CREATE TABLE wcf1_user_achievement_event_invoke(
 	time				INT,
     UNIQUE KEY uk_userID(userID, className, eventName)
 ) ENGINE=MYISAM;
+
+ALTER TABLE wcf1_achievement ADD INDEX i_objectName (objectName);
+ALTER TABLE wcf1_achievement_object ADD INDEX i_objectName (objectName);
+ALTER TABLE wcf1_user_achievement ADD INDEX i_time (time);

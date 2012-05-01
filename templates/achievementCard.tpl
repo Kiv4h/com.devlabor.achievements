@@ -13,7 +13,7 @@
 			<h3 class="subHeadline{if !$achievement->isAchieved()} light{/if}">{if $achievement->isAchieved()}<a href="index.php?page=Achievement&amp;achievementID={@$achievement->achievementID}{@SID_ARG_2ND}"><strong>{lang}{@$achievement->languageCategory}.{@$achievement->achievementName}{/lang}</strong></a>{else}{lang}{@$achievement->languageCategory}.{@$achievement->achievementName}{/lang}{/if}{if $achievement->hasAchieved()}<span class="achievementCardOptions"><img src="{icon}successS.png{/icon}" alt="{lang}wcf.achievement.achieved.user{/lang}" title="{lang}wcf.achievement.achieved.user{/lang}" /></span>{/if}</h3>
 			<p class="smallFont {if !$achievement->isAchieved()} light{/if}">{lang}{@$achievement->languageCategory}.{@$achievement->achievementName}.description{/lang}</p>
 
-			{if !$achievement->hasAchieved()}
+			{if !$achievement->hasAchieved() && $this->user->userID > 0}
 				{if $achievement->objectQuantity > 1 && $achievement->getObject()->showProgress}
 					<div class="progressBarContainer">
 						<div class="progressBar" title="100%">

@@ -30,10 +30,28 @@ Effect.Shine = function(element, object) {
 							style: 'left: '+(width*1.4)+'px;',
 							duration: 2, 
 							object: object,
-							afterFinish: function(){ this.object.fadeEffect = new Effect.Fade(element, {duration: 4.0 }) }
+							afterFinish: function(){ this.object.fadeEffect = new Effect.Fade(element, {duration: 3.0, afterFinish: function () { removeContainer() } }) }
 						});					
 						
 };
+
+// this must be global, because afterFinish handles scope wrong
+function removeContainer() {
+	for (i=visibleContainers.length;i>=0;i--) {
+		var element = document.getElementById(visibleContainers[i]);
+		
+		if(!element) continue;	
+		if(element.style.display == 'none')
+			visibleContainers.splice(i, 1);
+	}
+	
+	if(!visibleContainers.length) {
+		var notificationContainer = document.getElementById("animationNotificationContainer");
+		var mainContainer = document.getElementById("mainContainer")
+		if(!notificationContainer || !mainContainer) return;
+		mainContainer.removeChild(notificationContainer);
+	}
+}
 
 var Achievement = Class.create({
 	/**
@@ -49,7 +67,7 @@ var Achievement = Class.create({
 		}, arguments[0] || { });
 		
 		if($(this.options.element)){
-			visibleContainers.push(this.options.element);
+			visibleContainers.push($(this.options.element).readAttribute('id'));
 			
 			$(this.options.element).observe('mouseover', this.resetOpacity.bind(this));
 			$(this.options.element).observe('mouseout', this.fadeOut.bind(this));
@@ -64,22 +82,9 @@ var Achievement = Class.create({
 	},
 	
 	fadeOut: function(){
-		this.fadeEffect = Effect.Fade($(this.options.element), { duration: 3.0, afterFinish: function() { 
-			for (i=0;i<visibleContainers.length;i++) {
-				console.log(i);
-				if(visibleContainers[i].visible()) continue;
-				delete visibleContainers[i];
-				console.log(i);
-			}
-		
-			console.log(visibleContainers.length);
-			if(!visibleContainers.length) {
-				console.log('remove');
-				$(".animationNotificationContainer").remove();
-				}
-		} });
+		this.fadeEffect = new Effect.Fade($(this.options.element), { duration: 3.0, afterFinish: function(){ removeContainer() } });		
 	},
-	
+
 	Shine: function(){
 		this.fadeEffect = Effect.Shine($(this.options.element), this);
 		if(!isPlayed && (ACHIEVEMENT_SYSTEM_AUDIO_NOTIFICATION == 1)) this.playSound();

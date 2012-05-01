@@ -190,6 +190,13 @@
 		<item name="wcf.achievement.category.collection.description"><![CDATA[]]></item>
 		<item name="wcf.achievement.holiday.collection"><![CDATA[Free days are the best days]]></item>
 		<item name="wcf.achievement.holiday.collection.description"><![CDATA[Earned all achievements listed below.]]></item>
+		
+		<item name="wcf.achievement.birthday.visit"><![CDATA[Party hard]]></item>
+		<item name="wcf.achievement.birthday.visit.description"><![CDATA[Visit us on your birthday.]]></item>
+				
+		<item name="wcf.achievement.group.holiday.collection.rank"><![CDATA[Reward: Lazybone]]></item>
+		<item name="wcf.achievement.group.signature.rank"><![CDATA[Reward: Signator]]></item>
+		<item name="wcf.achievement.group.achievement.first.rank"><![CDATA[Reward: Grave Hunter]]></item>				
 	</category>
 	
 	<category name="wcf.achievement.plugin">
