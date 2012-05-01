@@ -15,7 +15,7 @@ require_once(WCF_DIR.'lib/data/user/achievement/Achievement.class.php');
  * @subpackage	data.user.achievement.reward
  */
 
-class AchievementReward extends DatabaseObject{
+class AchievementReward extends DatabaseObject {
 	public static $cache = null;
 	public $userID = 0;
 	public $group = null;
@@ -23,8 +23,8 @@ class AchievementReward extends DatabaseObject{
 	/**
 	 * @see DatabaseObject::__construct()
 	 */	
-	public function __construct($rewardID, $row = null){
-		if($rewardID !== null){ $row = self::getRewardByID($rewardID); }
+	public function __construct($rewardID, $row = null) {
+		if($rewardID !== null) $row = self::getRewardByID($rewardID);
 		
 		parent::__construct($row);
 	}
@@ -32,7 +32,7 @@ class AchievementReward extends DatabaseObject{
 	/**
 	 * Reads reward data by id from cache.
 	 */
-	public static function getRewardByID($rewardID){
+	public static function getRewardByID($rewardID) {
 		if(self::$cache === null)
 			self::$cache = WCF::getCache()->get('achievements-'.PACKAGE_ID, 'rewards');
 		
@@ -45,7 +45,7 @@ class AchievementReward extends DatabaseObject{
 	/**
 	 * Reads reward data by id from cache.
 	 */
-	public static function getRewardObjectByID($rewardID){
+	public static function getRewardObjectByID($rewardID) {
 		if(self::$cache === null)
 			self::$cache = WCF::getCache()->get('achievements-'.PACKAGE_ID, 'rewards');
 		
@@ -58,7 +58,7 @@ class AchievementReward extends DatabaseObject{
 	/**
 	 * Reads reward data by name from cache.
 	 */
-	public static function getRewardObjectByName($rewardName){
+	public static function getRewardObjectByName($rewardName) {
 		if(self::$cache === null)
 			self::$cache = WCF::getCache()->get('achievements-'.PACKAGE_ID, 'rewards');
 		
@@ -82,11 +82,13 @@ class AchievementReward extends DatabaseObject{
 	/**
 	 * Executes reward
 	 */
-    public function execute(Achievement $achievement, $userID){
+    public function execute(Achievement $achievement, $userID) {
 		if(!$userID) $this->userID = WCF::getUser()->userID;
 		
+		$concatGroupName = $achievement->languageCategory.'.group.'.$this->getName();
+		
 		foreach(Group::getAllGroups() as $groupID => $groupName){
-			if($groupName != $this->getName())
+			if($groupName != $concatGroupName)
 				continue;
 				
 			$this->group = new Group($groupID);
@@ -94,7 +96,7 @@ class AchievementReward extends DatabaseObject{
 		
 		//create new group
 		if($this->group === null)
-			$this->group = GroupEditor::create($this->getName(), $this->getGroupOptions());
+			$this->group = GroupEditor::create($concatGroupName, $this->getGroupOptions());
 		
 		$user = new UserEditor($userID);
 		$user->addToGroups($this->group->groupID, false, false);
@@ -108,11 +110,11 @@ class AchievementReward extends DatabaseObject{
 	/**
 	 * Returns name of usergroup
 	 */
-	public function getName(){
+	public function getName() {
 		return $this->rewardName;
 	} 
 	
-	public function __toString(){
+	public function __toString() {
 		return $this->getName();
 	}
 	
@@ -120,7 +122,7 @@ class AchievementReward extends DatabaseObject{
 	/**
 	 * Gets default values from options.
 	 */
-	public function getGroupOptions(){
+	public function getGroupOptions() {
 		$defaultValues = array();
 		
 		$sql = "SELECT	optionID, defaultValue

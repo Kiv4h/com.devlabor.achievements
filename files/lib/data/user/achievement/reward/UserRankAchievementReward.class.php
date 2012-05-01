@@ -31,7 +31,7 @@ class UserRankAchievementReward extends AchievementReward{
 		if($row['count'] > 0)
 			return;
 		
-		UserRankEditor::create($this->rewardValue, '', $this->group->groupID);
+		UserRankEditor::create('wcf.group.'.$this->rewardValue, '', $this->group->groupID);
 	}
 }
 

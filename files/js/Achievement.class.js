@@ -8,6 +8,7 @@
 
 var isPlayed = false;
 var sendAjaxRequest = true;
+var visibleContainers = new Array();
  
 Effect.Shine = function(element, object) {
 	element = $(element);
@@ -48,6 +49,8 @@ var Achievement = Class.create({
 		}, arguments[0] || { });
 		
 		if($(this.options.element)){
+			visibleContainers.push(this.options.element);
+			
 			$(this.options.element).observe('mouseover', this.resetOpacity.bind(this));
 			$(this.options.element).observe('mouseout', this.fadeOut.bind(this));
 		}
@@ -61,7 +64,20 @@ var Achievement = Class.create({
 	},
 	
 	fadeOut: function(){
-		this.fadeEffect = Effect.Fade($(this.options.element), { duration: 3.0 });
+		this.fadeEffect = Effect.Fade($(this.options.element), { duration: 3.0, afterFinish: function() { 
+			for (i=0;i<visibleContainers.length;i++) {
+				console.log(i);
+				if(visibleContainers[i].visible()) continue;
+				delete visibleContainers[i];
+				console.log(i);
+			}
+		
+			console.log(visibleContainers.length);
+			if(!visibleContainers.length) {
+				console.log('remove');
+				$(".animationNotificationContainer").remove();
+				}
+		} });
 	},
 	
 	Shine: function(){

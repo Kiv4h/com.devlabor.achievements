@@ -21,16 +21,18 @@ class AchievementList extends DatabaseObjectList{
     //items
     public $achievements = array();
     public $className = 'Achievement';
-
+	
 	/**
      * @see DatabaseObjectList::countObjects()
 	 */
 	public function countObjects(){
+		$objects = WCF::getCache()->get('achievements-'.PACKAGE_ID, 'objects');
+		
         $sql = "SELECT	COUNT(*) AS count
 			FROM	wcf".WCF_N."_achievement achievement 
 			LEFT OUTER JOIN wcf".WCF_N."_achievement_object achievement_object ON (achievement_object.objectName = achievement.objectName)
 			".$this->sqlJoins."
-			".(!empty($this->sqlConditions) ? "WHERE ".$this->sqlConditions : "");
+			WHERE (achievement_object.objectName IN ('".implode("','", array_keys($objects))."')) ".(!empty($this->sqlConditions) ? "AND ".$this->sqlConditions : "");
 		$row = WCF::getDB()->getFirstRow($sql);
         
 		return $row['count'];
@@ -40,6 +42,8 @@ class AchievementList extends DatabaseObjectList{
 	 * @see DatabaseObjectList::readObjects()
 	 */
 	public function readObjects(){
+		$objects = WCF::getCache()->get('achievements-'.PACKAGE_ID, 'objects');
+		
         $sql = "SELECT
                     ".(!empty($this->sqlSelects) ? $this->sqlSelects.',' : '')."
                     achievement.*,
@@ -48,7 +52,7 @@ class AchievementList extends DatabaseObjectList{
                 FROM wcf".WCF_N."_achievement achievement
 				LEFT OUTER JOIN wcf".WCF_N."_achievement_object achievement_object ON (achievement_object.objectName = achievement.objectName)
                 ".$this->sqlJoins."
-                ".(!empty($this->sqlConditions) ? "WHERE ".$this->sqlConditions : '')."
+                WHERE (achievement_object.objectName IN ('".implode("','", array_keys($objects))."')) ".(!empty($this->sqlConditions) ? "AND ".$this->sqlConditions : "")."
                 ".(!empty($this->sqlOrderBy) ? "ORDER BY ".$this->sqlOrderBy : '')."
                 ".(!empty($this->sqlLimit) ? "LIMIT ".$this->sqlOffset.", ".$this->sqlLimit : '');
         $result = WCF::getDB()->sendQuery($sql);

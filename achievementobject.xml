@@ -153,6 +153,14 @@
 				<eventname>saved</eventname>
 				<classfile>lib/data/user/achievement/object/AttachmentAchievementObject.class.php</classfile>
 				<languagecategory>wcf.achievement</languagecategory>
+			</object>		
+			<object>
+				<name>Birthday</name>
+				<parent>user</parent>
+				<eventclassname>StructuredTemplate</eventclassname>
+				<eventname>didDisplay</eventname>
+				<classfile>lib/data/user/achievement/object/BirthdayAchievementObject.class.php</classfile>
+				<languagecategory>wcf.achievement</languagecategory>
 			</object>
 			 <!-- visiting website-->
 			<object>

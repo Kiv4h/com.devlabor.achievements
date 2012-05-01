@@ -121,21 +121,6 @@ class Achievement extends DatabaseObject{
      * Reads all achievement receiver.
      */
     public function readReceivers(){
-		// \todo should be cached?
-        /*$sql = "SELECT 
-						user.*,
-						user_achievement.achievementID,
-						user_achievement.time
-					FROM wcf".WCF_N."_user_achievement user_achievement
-					INNER JOIN wcf".WCF_N."_user user ON (user.userID = user_achievement.userID)
-					WHERE (user_achievement.achievementID = ".$this->achievementID.")
-					ORDER BY user.username";
-			$result = WCF::getDB()->sendQuery($sql);
-
-			while($row = WCF::getDB()->fetchArray($result)){
-				$this->receivers[] = $row;	// \note performance issue: new UserProfile(null, $row);
-			}*/
-		
 		$data = WCF::getCache()->get('achievement-receivers-'.PACKAGE_ID);
 
 		if(isset($data[$this->achievementID]))
@@ -146,14 +131,6 @@ class Achievement extends DatabaseObject{
      * Counts all achievement receivers.
      */
     public function countReceivers(){
-        /*$sql = "SELECT 
-                    COUNT(user.userID) AS count
-                FROM wcf".WCF_N."_user_achievement user_achievement
-                INNER JOIN wcf".WCF_N."_user user ON (user.userID = user_achievement.userID)
-                WHERE (user_achievement.achievementID = ".$this->achievementID.")";
-        $result = WCF::getDB()->getFirstRow($sql);
-
-        return $result['count'];*/
 		if(!count($this->receivers))
 			$this->readReceivers();
 
@@ -164,15 +141,6 @@ class Achievement extends DatabaseObject{
 	 * Returns true, if this achievement is achieved by someone.
 	 */
 	public function isAchieved(){
-		/*$sql = "SELECT 
-					COUNT(user_achievement.userID) AS count
-				FROM wcf".WCF_N."_user_achievement user_achievement
-				WHERE (user_achievement.achievementID = ".$this->achievementID.") AND 
-					  (user_achievement.userID > 0)";
-		$result = WCF::getDB()->getFirstRow($sql);
-		
-		return ($result['count'] > 0);*/
-
 		return ($this->countReceivers() > 0);
 	}
 	

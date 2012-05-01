@@ -59,7 +59,7 @@
 		<item name="wcf.achievement.list.ranking"><![CDATA[Erfolgreichste Benutzer]]></item>
 		<item name="wcf.achievement.list.ranking.username"><![CDATA[Benutzername]]></item>
 		<item name="wcf.achievement.list.ranking.points"><![CDATA[Erfolgspunkte]]></item>
-		<item name="wcf.achievement.copyright"><![CDATA[Erweiterung: <a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Erfolgsystem 1.0.1"><strong>Erfolgsystem 1.0.2</strong></a>, entwickelt von Kiv]]></item>
+		<item name="wcf.achievement.copyright"><![CDATA[Erweiterung: <a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Erfolgssystem 1.0.3"><strong>Erfolgssystem 1.0.3</strong></a>, entwickelt von Kiv]]></item>
 		
 		<item name="wcf.achievement.level"><![CDATA[Stufe]]></item>
 		<item name="wcf.achievement.reward.title"><![CDATA[Belohnung]]></item>
@@ -190,6 +190,13 @@
 		<item name="wcf.achievement.category.collection.description"><![CDATA[]]></item>
 		<item name="wcf.achievement.holiday.collection"><![CDATA[Freie Tage sind die besten Tage]]></item>
 		<item name="wcf.achievement.holiday.collection.description"><![CDATA[Erreichen Sie alle unten aufgelisteten Erfolge.]]></item>
+		
+		<item name="wcf.achievement.birthday.visit"><![CDATA[Party hard]]></item>
+		<item name="wcf.achievement.birthday.visit.description"><![CDATA[Besuchen Sie uns an Ihrem Geburtstag.]]></item>
+				
+		<item name="wcf.achievement.group.holiday.collection.rank"><![CDATA[Belohnung: Faulpelz]]></item>
+		<item name="wcf.achievement.group.signature.rank"><![CDATA[Belohnung: Signator]]></item>
+		<item name="wcf.achievement.group.achievement.first.rank"><![CDATA[Belohnung: Grabjäger]]></item>		
 	</category>
 	
 	<category name="wcf.achievement.plugin">

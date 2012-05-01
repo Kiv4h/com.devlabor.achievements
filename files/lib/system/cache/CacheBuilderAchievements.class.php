@@ -24,9 +24,9 @@ class CacheBuilderAchievements implements CacheBuilder{
 		//categories
 		$sql = "SELECT
                     object_category.*,
-					object.languageCategory
+					IF(object.languageCategory IS NULL, 'wcf.achievement', object.languageCategory) AS languageCategory
                 FROM wcf".WCF_N."_achievement_object_category object_category
-				INNER JOIN wcf".WCF_N."_achievement_object object ON (object_category.categoryName = object.categoryName)
+				LEFT JOIN wcf".WCF_N."_achievement_object object ON (object_category.categoryName = object.categoryName)
 				INNER JOIN wcf".WCF_N."_package_dependency package_dependency ON (object_category.packageID = package_dependency.dependency)
 				WHERE (package_dependency.packageID = ".$packageID.")
 				ORDER BY package_dependency.priority, object_category.showOrder";
@@ -40,10 +40,8 @@ class CacheBuilderAchievements implements CacheBuilder{
 		$sql = "SELECT
                     object.*,
                     package.packageDir
-                FROM wcf".WCF_N."_achievement_object object
-                LEFT JOIN wcf".WCF_N."_package_dependency package_dependency ON (object.packageID = package_dependency.dependency)
-                LEFT JOIN wcf".WCF_N."_package package ON (package.packageID = object.packageID)
-				WHERE (package_dependency.packageID = ".$packageID.")
+                FROM wcf".WCF_N."_achievement_object object, wcf".WCF_N."_package package, wcf".WCF_N."_package_dependency package_dependency
+				WHERE (package.packageID = object.packageID) AND (object.packageID = package_dependency.dependency) AND (package_dependency.packageID = ".$packageID.")
                 GROUP BY object.objectID
                 ORDER BY package_dependency.priority";
 		$result = WCF::getDB()->sendQuery($sql);
@@ -57,11 +55,9 @@ class CacheBuilderAchievements implements CacheBuilder{
 					achievement.*,
 					achievement_object.categoryName,
 					achievement_object.languageCategory
-                FROM wcf".WCF_N."_achievement achievement
-				INNER JOIN wcf".WCF_N."_package_dependency package_dependency ON (achievement.packageID = package_dependency.dependency)
-				LEFT OUTER JOIN wcf".WCF_N."_achievement_object achievement_object ON (achievement_object.objectName = achievement.objectName)
-				WHERE (package_dependency.packageID = ".$packageID.")
-				ORDER BY achievement_object.objectName, achievement.objectQuantity";
+                FROM wcf".WCF_N."_achievement achievement, wcf".WCF_N."_achievement_object achievement_object, wcf".WCF_N."_package_dependency package_dependency  
+				WHERE (achievement_object.objectName = achievement.objectName) AND (achievement.packageID = package_dependency.dependency) AND (package_dependency.packageID = ".$packageID.")
+				ORDER BY package_dependency.priority, achievement_object.objectName, achievement.objectQuantity";
 		$result = WCF::getDB()->sendQuery($sql);
 
 		while($row = WCF::getDB()->fetchArray($result)){

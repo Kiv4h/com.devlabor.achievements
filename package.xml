@@ -5,8 +5,8 @@
 		<packagedescription languagecode="de"><![CDATA[Das komfortable Erfolgsystem für das WoltLab Community Framework.]]></packagedescription>
 		<packagedescription languagecode="de-informal"><![CDATA[Das komfortable Erfolgsystem für das WoltLab Community Framework.]]></packagedescription>
 		<packagedescription languagecode="en"><![CDATA[The comfortable achievementsystem based on WoltLab Community Framework.]]></packagedescription>
-		<version>1.0.2</version>
-		<date>2012-01-29</date>
+		<version>1.0.3</version>
+		<date>2012-04-25</date>
         <isunique>1</isunique>
 	</packageinformation>
 
@@ -69,6 +69,8 @@
 		
 		<achievementobject>achievementobject.xml</achievementobject>
 		<achievement>achievement.xml</achievement>
+		
+		<sql>update_103.sql</sql>
 		
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>

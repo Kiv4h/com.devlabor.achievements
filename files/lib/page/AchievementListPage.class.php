@@ -136,8 +136,7 @@ class AchievementListPage extends AbstractPage{
     /**
      * Reads achievements.
      */
-    public function readLatestAchievements(){
-		// \note this is slooooow
+    public function readLatestAchievements(){	
 		$sql = "SELECT 
 					achievement.*,
 					user_achievement.userID,
@@ -145,8 +144,8 @@ class AchievementListPage extends AbstractPage{
 					achievement_object.categoryName,
 					achievement_object.languageCategory,
 					user.username
-				FROM wcf".WCF_N."_achievement achievement
-				INNER JOIN wcf".WCF_N."_user_achievement user_achievement ON (user_achievement.achievementID = achievement.achievementID)
+				FROM wcf".WCF_N."_user_achievement user_achievement
+				INNER JOIN wcf".WCF_N."_achievement achievement ON (user_achievement.achievementID = achievement.achievementID)
 				INNER JOIN wcf".WCF_N."_user user ON (user.userID = user_achievement.userID)
 				LEFT OUTER JOIN wcf".WCF_N."_achievement_object achievement_object ON (achievement_object.objectName = achievement.objectName)
 				ORDER BY user_achievement.time DESC
@@ -154,12 +153,7 @@ class AchievementListPage extends AbstractPage{
 		$result = WCF::getDB()->sendQuery($sql);
 		
 		while($row = WCF::getDB()->fetchArray($result)){
-			//$row['user'] = new User(null, array('userID' => $row['userID'], 'username' => 'abc'));
-			// \note pretty code... 
-			$row['user'] = new stdClass;
-			$row['user']->userID = $row['userID'];
-			$row['user']->username = $row['username'];
-			
+			$row['user'] = new User(null, array('userID' => $row['userID'], 'username' => $row['username']));
 			$this->latestAchievements[] = new Achievement(null, $row);
 		}
     }	

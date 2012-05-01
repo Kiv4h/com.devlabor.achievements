@@ -154,6 +154,13 @@
 			<icon>achievements/visitsM.png</icon>
 			<points>40</points>
 		</achievement>
+		<achievement>
+			<name>birthday.visit</name>
+			<object>Birthday</object>
+			<quantity>1</quantity>
+			<icon>achievements/birthdayM.png</icon>
+			<points>10</points>
+		</achievement>
 		<!-- user.edit -->
 		<achievement>
 			<name>usersignature.create</name>
