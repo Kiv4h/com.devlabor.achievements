@@ -11,7 +11,8 @@ CREATE TABLE wcf1_achievement_object(
     classFile       	VARCHAR(255),
 	languageCategory 	VARCHAR(255),
     PRIMARY KEY(objectID),
-    UNIQUE KEY uk_packageID(packageID, objectName)
+    UNIQUE KEY uk_packageID(packageID, objectName),
+	INDEX (objectName)
 ) ENGINE=MYISAM;
 
 DROP TABLE IF EXISTS wcf1_achievement_object_category;
@@ -41,7 +42,8 @@ CREATE TABLE wcf1_achievement(
 	rewardName			VARCHAR(255),		
     parent            	VARCHAR(255),
     PRIMARY KEY(achievementID),
-    UNIQUE KEY uk_packageID(packageID, achievementName)
+    UNIQUE KEY uk_packageID(packageID, achievementName),
+	INDEX (objectName)
 ) ENGINE=MYISAM;
 
 
@@ -63,7 +65,8 @@ CREATE TABLE wcf1_user_achievement(
     userID              INT NOT NULL,
     achievementID       INT NOT NULL,
     time                INT,
-    UNIQUE KEY uk_userID(userID, achievementID)
+    UNIQUE KEY uk_userID(userID, achievementID),
+	INDEX (time)
 ) ENGINE=MYISAM;
 
 DROP TABLE IF EXISTS wcf1_user_achievement_event_invoke;
@@ -75,7 +78,3 @@ CREATE TABLE wcf1_user_achievement_event_invoke(
 	time				INT,
     UNIQUE KEY uk_userID(userID, className, eventName)
 ) ENGINE=MYISAM;
-
-ALTER TABLE wcf1_achievement ADD INDEX i_objectName (objectName);
-ALTER TABLE wcf1_achievement_object ADD INDEX i_objectName (objectName);
-ALTER TABLE wcf1_user_achievement ADD INDEX i_time (time);

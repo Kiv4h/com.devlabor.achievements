@@ -137,6 +137,8 @@ class AchievementListPage extends AbstractPage{
      * Reads achievements.
      */
     public function readLatestAchievements(){	
+		$objects = WCF::getCache()->get('achievements-'.PACKAGE_ID, 'objects');
+		
 		$sql = "SELECT 
 					achievement.*,
 					user_achievement.userID,
@@ -148,6 +150,7 @@ class AchievementListPage extends AbstractPage{
 				INNER JOIN wcf".WCF_N."_achievement achievement ON (user_achievement.achievementID = achievement.achievementID)
 				INNER JOIN wcf".WCF_N."_user user ON (user.userID = user_achievement.userID)
 				LEFT OUTER JOIN wcf".WCF_N."_achievement_object achievement_object ON (achievement_object.objectName = achievement.objectName)
+				WHERE (achievement_object.objectName IN ('".implode("','", array_keys($objects))."'))
 				ORDER BY user_achievement.time DESC
 				LIMIT 0,".ACHIEVEMENT_SYSTEM_LATEST_ENTRIES;		
 		$result = WCF::getDB()->sendQuery($sql);

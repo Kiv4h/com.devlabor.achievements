@@ -98,13 +98,13 @@ class AchievementReward extends DatabaseObject {
 		if($this->group === null)
 			$this->group = GroupEditor::create($concatGroupName, $this->getGroupOptions());
 		
-		$user = new UserEditor($userID);
+		$user = new UserEditor($this->userID);
 		$user->addToGroups($this->group->groupID, false, false);
 		
 		//notifier user
         if(!MODULE_USER_NOTIFICATION) return;
 
-        NotificationHandler::fireEvent('gainAchievementReward', 'userAchievementReward', $this->rewardID, $userID, array('achievement' => $achievement, 'reward' => $this));
+        NotificationHandler::fireEvent('gainAchievementReward', 'userAchievementReward', $this->rewardID, $this->userID, array('achievement' => $achievement, 'reward' => $this));
 	}
 	
 	/**

@@ -1,4 +1,4 @@
-﻿{if $animNotifications|count}
+{if $animNotifications|count}
 <script type="text/javascript">
 	//<![CDATA[
 	var ACHIEVEMENT_SYSTEM_AUDIO_NOTIFICATION = '{@ACHIEVEMENT_SYSTEM_AUDIO_NOTIFICATION}';
