@@ -82,8 +82,11 @@ class AchievementReward extends DatabaseObject {
 	/**
 	 * Executes reward
 	 */
-    public function execute(Achievement $achievement, $userID) {
-		if(!$userID) $this->userID = WCF::getUser()->userID;
+    public function execute(Achievement $achievement, $userID = 0) {
+		if(!$userID) 
+			$this->userID = WCF::getUser()->userID;
+		else 
+			$this->userID = $userID;
 		
 		$concatGroupName = $achievement->languageCategory.'.group.'.$this->getName();
 		

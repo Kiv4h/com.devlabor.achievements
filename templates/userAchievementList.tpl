@@ -80,9 +80,10 @@
 						{if $additionalContent2|isset}{@$additionalContent2}{/if}
 						
 						{if $additionalContent3|isset}{@$additionalContent3}{/if}
-				</div>
-				<div class="contentFooter">
-					{@$pagesOutput}
+						
+						<div class="contentFooter">
+							{@$pagesOutput}
+						</div>
 				</div>
 			</div>
 			<div class="container-3 column second sidebar profileSidebar">

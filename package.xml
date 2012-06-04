@@ -5,7 +5,7 @@
 		<packagedescription languagecode="de"><![CDATA[Das komfortable Erfolgsystem für das WoltLab Community Framework.]]></packagedescription>
 		<packagedescription languagecode="de-informal"><![CDATA[Das komfortable Erfolgsystem für das WoltLab Community Framework.]]></packagedescription>
 		<packagedescription languagecode="en"><![CDATA[The comfortable achievementsystem based on WoltLab Community Framework.]]></packagedescription>
-		<version>1.0.3</version>
+		<version>1.0.4</version>
 		<date>2012-04-25</date>
         <isunique>1</isunique>
 	</packageinformation>
@@ -60,7 +60,7 @@
 		<languages languagecode="en">lang/en.xml</languages>
 	</instructions>
 
-	<instructions type="update" fromversion="1.0.*">
+	<instructions type="update" fromversion="1.0.0">
 		<files>files.tar</files>
 		<templates>templates.tar</templates>
 		<packageinstallationplugins>pip.tar</packageinstallationplugins>
@@ -75,6 +75,51 @@
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
 		<languages languagecode="en">lang/en.xml</languages>		
-	</instructions>
+	</instructions>	
+	
+	<instructions type="update" fromversion="1.0.1">
+		<files>files.tar</files>
+		<templates>templates.tar</templates>
+		<packageinstallationplugins>pip.tar</packageinstallationplugins>
+	
+		<options>options.xml</options>
+		
+		<achievementobject>achievementobject.xml</achievementobject>
+		<achievement>achievement.xml</achievement>
+		
+		<sql>update_103.sql</sql>
+		
+		<languages languagecode="de">lang/de.xml</languages>
+		<languages languagecode="de-informal">lang/de-informal.xml</languages>
+		<languages languagecode="en">lang/en.xml</languages>		
+	</instructions>	
+	
+	<instructions type="update" fromversion="1.0.2">
+		<files>files.tar</files>
+		<templates>templates.tar</templates>
+		<packageinstallationplugins>pip.tar</packageinstallationplugins>
+	
+		<options>options.xml</options>
+		
+		<achievementobject>achievementobject.xml</achievementobject>
+		<achievement>achievement.xml</achievement>
+		
+		<sql>update_103.sql</sql>
+		
+		<languages languagecode="de">lang/de.xml</languages>
+		<languages languagecode="de-informal">lang/de-informal.xml</languages>
+		<languages languagecode="en">lang/en.xml</languages>		
+	</instructions>	
+
+	<instructions type="update" fromversion="1.0.3">
+		<files>files.tar</files>
+		<templates>templates.tar</templates>
+
+		<sql>update_104.sql</sql>	
+		
+		<languages languagecode="de">lang/de.xml</languages>
+		<languages languagecode="de-informal">lang/de-informal.xml</languages>
+		<languages languagecode="en">lang/en.xml</languages>			
+	</instructions>		
 </package>
 

@@ -13,11 +13,14 @@
 {/if}
 *}
 
+<p class="info">{lang}wcf.acp.achievement.award.description{/lang}</p>
+
 <form method="post" action="index.php?form=AchievementAward">
 	<div class="border content">
 		<div class="container-1">			
-			<p class="info">{lang}wcf.acp.achievement.award.description{/lang}</p>
+			\todo add radio buttons and user select
 			
+			\todo erfolgs selektion
 			{if $additionalFields|isset}{@$additionalFields}{/if}
 		</div>
 	</div>
