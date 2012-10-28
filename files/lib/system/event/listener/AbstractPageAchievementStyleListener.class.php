@@ -19,6 +19,8 @@ class AbstractPageAchievementStyleListener implements EventListener{
      * @see EventListener::execute
      */
     public function execute($eventObj, $className, $eventName){
+		if(!MODULE_ACHIEVEMENT_SYSTEM) return;
+		
         if($eventName == 'assignVariables'){
             WCF::getTpl()->append('specialStyles', '<link href="'.RELATIVE_WCF_DIR.'style/style-achievements.css" type="text/css" rel="stylesheet"/>');
         }

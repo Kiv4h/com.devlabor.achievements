@@ -34,6 +34,11 @@
 				<optiontype>boolean</optiontype>
 				<defaultvalue>1</defaultvalue>
 			</option>
+			<option name="achievement_system_rewarding">
+				<categoryname>user.achievements</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>			
 		</options>
 	</import>
 	<delete>

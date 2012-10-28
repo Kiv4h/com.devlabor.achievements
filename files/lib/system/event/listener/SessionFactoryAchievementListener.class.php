@@ -17,6 +17,9 @@ class SessionFactoryAchievementListener implements EventListener {
 	 * @see EventListener::execute()
 	 */
 	public function execute($eventObj, $className, $eventName){
+		if(!MODULE_ACHIEVEMENT_SYSTEM) 
+			return;
+	
 		if($eventName != 'didInit')
 			return;
 

@@ -73,10 +73,18 @@ class AchievementRewardPackageInstallationPlugin extends AbstractXMLPackageInsta
 						}
 						$nameArray[] = $reward['name'];
 					}
-
-					// \todo delete user rank and co.
 					
 					if(count($nameArray)) {
+						// delete user groups
+						$sql = "DELETE FROM	wcf".WCF_N."_group user_group
+								WHERE user_group.rewardID = (
+										SELECT rewardID
+										FROM wcf".WCF_N."_".$this->tableName."
+										WHERE (packageID = ".$this->installation->getPackageID().") AND
+										      (rewardName IN ('".implode("','", array_map('escapeString', $nameArray))."'))
+										)";
+						WCF::getDB()->sendQuery($sql);
+
 						$sql = "DELETE FROM	wcf".WCF_N."_".$this->tableName."
                                 WHERE (packageID = ".$this->installation->getPackageID().") AND
                                         (rewardName IN ('".implode("','", array_map('escapeString', $nameArray))."'))";

@@ -27,6 +27,7 @@
 		<item name="wcf.achievement.receivedBy"><![CDATA[Errungen durch]]></item>
 		<item name="wcf.achievement.list"><![CDATA[Erfolge auflisten]]></item>
 		<item name="wcf.achievement.list.all"><![CDATA[Alle Erfolge]]></item>
+		<item name="wcf.achievement.list.all"><![CDATA[Alle Erfolge]]></item>
 		<item name="wcf.achievement.list.noItems"><![CDATA[Keine Einträge vorhanden.]]></item>
 		<item name="wcf.achievement.list.all.description"><![CDATA[]]></item>
 		<item name="wcf.achievement.list.latest"><![CDATA[Die letzten Erfolge]]></item>
@@ -235,6 +236,8 @@
 		<item name="wcf.acp.option.achievement_system_latest_entries.description"><![CDATA[Geben Sie an, wieviele Erfolge unter "Letzte Erfolge" in der Übersicht aufgelistet werden sollen.]]></item>
 		<item name="wcf.acp.option.achievement_system_audio_notification"><![CDATA[Audiowiedergabe aktivieren?]]></item>
 		<item name="wcf.acp.option.achievement_system_audio_notification.description"><![CDATA[Aktivieren Sie diese Option, wenn ein Sound bei einem neuen Erfolg abgespielt werden soll.]]></item>
+		<item name="wcf.acp.option.achievement_system_rewarding"><![CDATA[Belohnungen aktivieren?]]></item>
+		<item name="wcf.acp.option.achievement_system_rewarding.description"><![CDATA[Aktivieren Sie diese Option, wenn Benutzer Belohnungen durch das Erringen von Erfolgen erhalten sollen.]]></item>
 	</category>
 	
 	<category name="wcf.acp.package">

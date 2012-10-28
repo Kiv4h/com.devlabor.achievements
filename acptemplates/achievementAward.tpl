@@ -18,9 +18,9 @@
 <form method="post" action="index.php?form=AchievementAward">
 	<div class="border content">
 		<div class="container-1">			
-			\todo add radio buttons and user select
+			{* \todo add radio buttons and user select
 			
-			\todo erfolgs selektion
+			\todo erfolgs selektion *}
 			{if $additionalFields|isset}{@$additionalFields}{/if}
 		</div>
 	</div>

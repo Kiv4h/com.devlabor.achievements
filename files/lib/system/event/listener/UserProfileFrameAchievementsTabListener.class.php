@@ -17,6 +17,9 @@ class UserProfileFrameAchievementsTabListener implements EventListener {
 	 * @see EventListener::execute()
 	 */
 	public function execute($eventObj, $className, $eventName) {
+		if(!MODULE_ACHIEVEMENT_SYSTEM) 
+			return;
+			
 		if($eventName == 'init'){
 			$eventObj->sqlSelects .= "(SELECT COUNT(*) FROM wcf".WCF_N."_user_achievement WHERE userID = user.userID) AS achievementsCount,";
 		}

@@ -20,7 +20,7 @@ class EarnAchievementListener implements EventListener{
      */
     public function execute($eventObj, $className, $eventName){
 		//before session init?
-		if(!WCF::getUser()) return;
+		if(!MODULE_ACHIEVEMENT_SYSTEM || !WCF::getUser()) return;
 		
 		if(WCF::getUser()->userID == 0) 
 			return;

@@ -49,6 +49,10 @@ class AchievementPluginPage extends AbstractPage{
      * @see Page::show()
      */
     public function show(){
+		if(!MODULE_ACHIEVEMENT_SYSTEM) {
+			throw new IllegalLinkException();
+		}	
+	
 		require_once(WCF_DIR.'lib/page/util/menu/HeaderMenu.class.php');
         HeaderMenu::setActiveMenuItem('wcf.header.menu.achievements');
 	

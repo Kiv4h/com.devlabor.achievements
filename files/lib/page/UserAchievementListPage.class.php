@@ -122,6 +122,10 @@ class UserAchievementListPage extends SortablePage{
 	 * @see Page::show()
 	 */
 	public function show(){
+		if(!MODULE_ACHIEVEMENT_SYSTEM) {
+			throw new IllegalLinkException();
+		}
+		
 		// set active menu item
 		UserProfileMenu::getInstance()->setActiveMenuItem('wcf.user.profile.menu.link.achievements');
 

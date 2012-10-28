@@ -58,7 +58,7 @@
 						<label>{lang}wcf.achievement.plugin.license{/lang}</label>
 					</div>
 					<div class="formField">
-						<p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">CC BY-NC-SA 3.0</a></p>
+						<p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">Creative Commons BY-NC-SA 3.0</a></p>
 					</div>
 				</div>
 			</fieldset>
@@ -114,6 +114,32 @@
 					</div>
 					<div class="formField">
 						<p>Free</p>
+					</div>
+				</div>
+				
+				<p class="light small">Cube Crystal-Icons</p>
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label>{lang}wcf.achievement.plugin.author{/lang}</label>
+					</div>
+					<div class="formField">
+						<p>Bergwerk-Forum / DeanR</p>
+					</div>
+				</div>
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label>{lang}wcf.achievement.plugin.website{/lang}</label>
+					</div>
+					<div class="formField">
+						<p><a href="http://minebuilders.de" title="http://minebuilders.de" class="externalURL">http://minebuilders.de</a></p>
+					</div>
+				</div>
+				<div class="formElement">
+					<div class="formFieldLabel">
+						<label>{lang}wcf.achievement.plugin.license{/lang}</label>
+					</div>
+					<div class="formField">
+						<p><a href="http://creativecommons.org/licenses/by-sa/2.0/de/" title="http://creativecommons.org/licenses/by-sa/2.0/de/" class="externalURL">Creative Commons BY-SA 2.0</a></p>
 					</div>
 				</div>
 			</fieldset>

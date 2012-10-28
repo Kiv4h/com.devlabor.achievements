@@ -7,12 +7,38 @@
 			<options>module_achievement_system</options>
 		</acpmenuitem>
 
+		<acpmenuitem name="wcf.acp.menu.link.user.achievements.list">
+			<parent>wcf.acp.menu.link.user.achievements</parent>
+			<showorder>1</showorder>
+			<link>index.php?page=AchievementList</link>
+			<permissions>admin.achievements.canViewList</permissions>
+            <icon>icon/achievementM.png</icon>
+		</acpmenuitem>
+		<acpmenuitem name="wcf.acp.menu.link.user.achievements.add">
+			<parent>wcf.acp.menu.link.user.achievements</parent>
+			<showorder>2</showorder>
+			<link>index.php?form=AchievementAdd</link>
+			<permissions>admin.achievements.canAddAchievement</permissions>
+		</acpmenuitem>		
 		<acpmenuitem name="wcf.acp.menu.link.user.achievements.award">
 			<parent>wcf.acp.menu.link.user.achievements</parent>
 			<showorder>3</showorder>
 			<link>index.php?form=AchievementAward</link>
 			<permissions>admin.achievements.canAwardAchievements</permissions>
 			<icon>icon/achievementM.png</icon>
+		</acpmenuitem>
+				
+		<acpmenuitem name="wcf.acp.menu.link.user.achievements.import">
+			<parent>wcf.acp.menu.link.user.achievements</parent>
+			<showorder>4</showorder>
+			<link>index.php?form=AchievementImport</link>
+			<permissions>admin.achievements.canImportAchievements</permissions>
+		</acpmenuitem>				
+		<acpmenuitem name="wcf.acp.menu.link.user.achievements.export">
+			<parent>wcf.acp.menu.link.user.achievements</parent>
+			<showorder>5</showorder>
+			<link>index.php?form=AchievementExport</link>
+			<permissions>admin.achievements.canExportAchievements</permissions>
 		</acpmenuitem>
 	</import>
 </data>

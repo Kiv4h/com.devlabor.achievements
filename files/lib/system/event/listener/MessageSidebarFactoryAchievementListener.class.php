@@ -17,6 +17,8 @@ class MessageSidebarFactoryAchievementListener implements EventListener{
      * @see EventListener::execute
      */
     public function execute($eventObj, $className, $eventName){
+		if(!MODULE_ACHIEVEMENT_SYSTEM) return;
+	
 		$additionalSidebarContents = '';
 	
 		foreach($eventObj->messageSidebars as $messageSidebar){

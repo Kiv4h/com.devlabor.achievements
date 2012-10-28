@@ -79,5 +79,16 @@ class AchievementPage extends AbstractPage{
 		   'maxLevels' => count($this->achievement->getRelatedAchievements())+1
         ));
     }
+	
+	/**
+	 * @see Page::show()
+	 */
+	public function show(){
+		if(!MODULE_ACHIEVEMENT_SYSTEM) {
+			throw new IllegalLinkException();
+		}
+		
+		parent::show();
+	} 	
 }
 ?>

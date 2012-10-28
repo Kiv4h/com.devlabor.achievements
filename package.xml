@@ -25,7 +25,7 @@
 		<requiredpackage minversion="1.0.0">com.woltlab.wcf.message.sidebar</requiredpackage>
 		
 		<requiredpackage minversion="1.0.0" file="http://update.woltlab.com/tempest/?packageName=com.woltlab.wcf.socialBookmarks">com.woltlab.wcf.socialBookmarks</requiredpackage>
-        <requiredpackage minversion="1.0.11" file="required/com.woltlab.community.wcf.user.notification.tar.gz">com.woltlab.community.wcf.user.notification</requiredpackage>
+        <requiredpackage minversion="1.0.11" file="http://store.woltlab.com/tempest/?packageName=com.woltlab.community.wcf.user.notification">com.woltlab.community.wcf.user.notification</requiredpackage>
 	</requiredpackages>
 
 	<instructions type="install">
@@ -58,6 +58,7 @@
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
 		<languages languagecode="en">lang/en.xml</languages>
+		<languages languagecode="fr">lang/fr.xml</languages>
 	</instructions>
 
 	<instructions type="update" fromversion="1.0.0">
@@ -74,7 +75,8 @@
 		
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
-		<languages languagecode="en">lang/en.xml</languages>		
+		<languages languagecode="en">lang/en.xml</languages>
+		<languages languagecode="fr">lang/fr.xml</languages>				
 	</instructions>	
 	
 	<instructions type="update" fromversion="1.0.1">
@@ -91,7 +93,8 @@
 		
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
-		<languages languagecode="en">lang/en.xml</languages>		
+		<languages languagecode="en">lang/en.xml</languages>
+		<languages languagecode="fr">lang/fr.xml</languages>				
 	</instructions>	
 	
 	<instructions type="update" fromversion="1.0.2">
@@ -108,7 +111,8 @@
 		
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
-		<languages languagecode="en">lang/en.xml</languages>		
+		<languages languagecode="en">lang/en.xml</languages>	
+		<languages languagecode="fr">lang/fr.xml</languages>			
 	</instructions>	
 
 	<instructions type="update" fromversion="1.0.3">
@@ -119,7 +123,8 @@
 		
 		<languages languagecode="de">lang/de.xml</languages>
 		<languages languagecode="de-informal">lang/de-informal.xml</languages>
-		<languages languagecode="en">lang/en.xml</languages>			
+		<languages languagecode="en">lang/en.xml</languages>	
+		<languages languagecode="fr">lang/fr.xml</languages>		
 	</instructions>		
 </package>
 

@@ -111,8 +111,9 @@ class Achievement extends DatabaseObject{
 			NotificationHandler::fireEvent('unlockAchievement', 'userAchievement', $this->achievementID, $userID, array('achievement' => $this));
 		
 		//reward
-		if($this->getReward() !== null)
+		if(ACHIEVEMENT_SYSTEM_REWARDING && $this->getReward() !== null) {
 			$this->getReward()->execute($this, $userID);
+		}
 			
 		EventHandler::fireAction($this, 'awardToUser');
     }
@@ -278,7 +279,7 @@ class Achievement extends DatabaseObject{
 	 */
 	public function getReward(){
 		if(empty($this->data['rewardName']))
-			return;
+			return null;
 		
 		if($this->reward === null)
 			$this->reward = AchievementReward::getRewardObjectByName($this->rewardName);

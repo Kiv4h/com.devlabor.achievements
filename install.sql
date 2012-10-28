@@ -1,4 +1,5 @@
 ALTER TABLE wcf1_user ADD achievementPoints INT(10) UNSIGNED NOT NULL default 0;
+ALTER TABLE wcf1_group ADD COLUMN rewardID INT DEFAULT NULL;
 
 DROP TABLE IF EXISTS wcf1_achievement_object;
 CREATE TABLE wcf1_achievement_object(
