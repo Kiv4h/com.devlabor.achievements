@@ -59,7 +59,7 @@
 		<item name="wcf.achievement.list.ranking"><![CDATA[Successful users]]></item>
 		<item name="wcf.achievement.list.ranking.username"><![CDATA[Username]]></item>
 		<item name="wcf.achievement.list.ranking.points"><![CDATA[Achievement points]]></item>
-		<item name="wcf.achievement.copyright"><![CDATA[Plugin: <a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Achievementsystem 1.0.4"><strong>Achievementsystem 1.0.4</strong></a>, developed by Kiv]]></item>
+		<item name="wcf.achievement.copyright"><![CDATA[Plugin: <a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Achievementsystem 1.0.5"><strong>Achievementsystem 1.0.5</strong></a>, developed by Kiv]]></item>
 		
 		<item name="wcf.achievement.level"><![CDATA[Level]]></item>
 		<item name="wcf.achievement.reward.title"><![CDATA[Reward]]></item>
@@ -235,6 +235,8 @@
 		<item name="wcf.acp.option.achievement_system_latest_entries.description"><![CDATA[Indicate how many achievements to be listed in the table "Recent Achievements".]]></item>
 		<item name="wcf.acp.option.achievement_system_audio_notification"><![CDATA[Enable Audio notification]]></item>
 		<item name="wcf.acp.option.achievement_system_audio_notification.description"><![CDATA[Activate this option when you want to enable audio notification for new achievements.]]></item>
+		<item name="wcf.acp.option.achievement_system_rewarding"><![CDATA[Enable rewards?]]></item>
+		<item name="wcf.acp.option.achievement_system_rewarding.description"><![CDATA[Activate this option to allow users to get rewards for earning an achievement.]]></item>
 	</category>
 	
 	<category name="wcf.acp.achievement">

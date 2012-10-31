@@ -59,7 +59,7 @@
 		<item name="wcf.achievement.list.ranking"><![CDATA[Les plus actifs]]></item>
 		<item name="wcf.achievement.list.ranking.username"><![CDATA[Nom d’utilisateur]]></item>
 		<item name="wcf.achievement.list.ranking.points"><![CDATA[Points de trophées acquis]]></item>
-		<item name="wcf.achievement.copyright"><![CDATA[<a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Trophées des membres 1.0.4"><strong>Trophées des membres 1.0.4</strong></a>, développé par Kiv]]></item>
+		<item name="wcf.achievement.copyright"><![CDATA[<a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Trophées des membres 1.0.5"><strong>Trophées des membres 1.0.5</strong></a>, développé par Kiv]]></item>
 		
 		<item name="wcf.achievement.level"><![CDATA[Niveau]]></item>
 		<item name="wcf.achievement.reward.title"><![CDATA[Récompense]]></item>

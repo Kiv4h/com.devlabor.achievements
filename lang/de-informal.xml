@@ -59,7 +59,7 @@
 		<item name="wcf.achievement.list.ranking"><![CDATA[Erfolgreichste Benutzer]]></item>
 		<item name="wcf.achievement.list.ranking.username"><![CDATA[Benutzername]]></item>
 		<item name="wcf.achievement.list.ranking.points"><![CDATA[Erfolgspunkte]]></item>
-		<item name="wcf.achievement.copyright"><![CDATA[Erweiterung: <a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Erfolgssystem 1.0.4"><strong>Erfolgssystem 1.0.4</strong></a>, entwickelt von Kiv]]></item>
+		<item name="wcf.achievement.copyright"><![CDATA[Erweiterung: <a href="index.php?page=AchievementPlugin{@SID_ARG_2ND}" title="Erfolgssystem 1.0.5"><strong>Erfolgssystem 1.0.5</strong></a>, entwickelt von Kiv]]></item>
 		
 		<item name="wcf.achievement.level"><![CDATA[Stufe]]></item>
 		<item name="wcf.achievement.reward.title"><![CDATA[Belohnung]]></item>

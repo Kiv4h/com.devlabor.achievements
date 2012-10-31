@@ -99,7 +99,7 @@ class AchievementReward extends DatabaseObject {
 		
 		//create new group
 		if($this->group === null)
-			$this->group = GroupEditor::create($concatGroupName, $this->getGroupOptions());
+			$this->group = GroupEditor::create($concatGroupName, $this->getGroupOptions(), array('rewardID' => $this->rewardID));
 		
 		$user = new UserEditor($this->userID);
 		$user->addToGroups($this->group->groupID, false, false);
