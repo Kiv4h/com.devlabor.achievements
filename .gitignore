@@ -5,3 +5,4 @@
 *
 *.tar
 /required/com.woltlab.community.wcf.user.notification.tar.gz
+/nbproject
